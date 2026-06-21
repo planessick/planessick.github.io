@@ -136,7 +136,12 @@
       line-height: 0.92;
       letter-spacing: 0;
       text-transform: uppercase;
-      overflow-wrap: anywhere;
+      overflow-wrap: normal;
+      word-break: keep-all;
+    }
+
+    h1 span {
+      display: block;
     }
 
     h1 .heart {
@@ -452,7 +457,7 @@
 
       h1 {
         max-width: 360px;
-        font-size: clamp(36px, 12vw, 52px);
+        font-size: clamp(32px, 10.5vw, 48px);
         line-height: 0.95;
       }
 
@@ -563,7 +568,7 @@
       }
 
       h1 {
-        font-size: clamp(32px, 11vw, 42px);
+        font-size: clamp(28px, 9.8vw, 36px);
       }
 
       p,
@@ -620,7 +625,13 @@
           <span class="pulse"></span>
         </div>
 
-        <h1 id="question">У нас коннект или дисконнект?<span class="heart">♥</span></h1>
+        <h1 id="question">
+          <span>У нас</span>
+          <span>коннект</span>
+          <span>или</span>
+          <span>дисконнект?</span>
+          <span class="heart">♥</span>
+        </h1>
         <p>Один маленький выбор, который может сделать вечер теплее, а настроение нежнее.</p>
 
         <div class="actions" id="playground">
