@@ -259,15 +259,7 @@
     }
 
     .success-illustration::after {
-      left: 50%;
-      top: 53%;
-      width: 64px;
-      height: 34px;
-      border-left: 8px solid #fff;
-      border-bottom: 8px solid #fff;
-      border-radius: 0;
-      transform: translate(-50%, -50%) rotate(-45deg);
-      z-index: 3;
+      display: none;
     }
 
     .success-heart {
@@ -495,7 +487,7 @@
       }
 
       .actions {
-        min-height: 152px;
+        min-height: 178px;
         width: min(100%, 320px);
         margin-top: 30px;
       }
@@ -518,7 +510,7 @@
 
       .disconnect {
         left: 50%;
-        top: 100px;
+        top: 114px;
         transform: translateX(-50%);
       }
 
@@ -711,9 +703,11 @@
         width: connect.width,
         height: connect.height
       };
-      const lowerRowTop = connectBox.top + connectBox.height + 18;
-      const useLowerRow = area.height >= button.height * 2 + 34;
-      const minTop = useLowerRow ? Math.min(lowerRowTop, area.height - button.height - padding) : padding;
+      const isPhoneLayout = window.matchMedia("(max-width: 560px)").matches;
+      const lowerRowTop = connectBox.top + connectBox.height + 30;
+      const minTop = isPhoneLayout
+        ? Math.min(lowerRowTop, Math.max(padding, area.height - button.height - padding))
+        : padding;
       const maxTop = Math.max(minTop, area.height - button.height - padding);
       const candidates = Array.from({ length: 18 }, () => {
         const left = Math.random() * maxLeft;
