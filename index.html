@@ -487,7 +487,7 @@
       }
 
       .actions {
-        min-height: 178px;
+        min-height: 230px;
         width: min(100%, 320px);
         margin-top: 30px;
       }
@@ -704,7 +704,8 @@
         height: connect.height
       };
       const isPhoneLayout = window.matchMedia("(max-width: 560px)").matches;
-      const lowerRowTop = connectBox.top + connectBox.height + 30;
+      const phoneDisconnectStartTop = 114;
+      const lowerRowTop = phoneDisconnectStartTop + 30;
       const minTop = isPhoneLayout
         ? Math.min(lowerRowTop, Math.max(padding, area.height - button.height - padding))
         : padding;
