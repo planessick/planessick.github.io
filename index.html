@@ -747,6 +747,10 @@
       cursorIsInsidePlayground = false;
     });
     playground.addEventListener("touchstart", (event) => {
+      if (connectBtn.contains(event.target)) {
+        return;
+      }
+
       const touch = event.touches[0];
       const area = playground.getBoundingClientRect();
       const button = disconnectBtn.getBoundingClientRect();
