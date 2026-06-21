@@ -487,13 +487,13 @@
       }
 
       .actions {
-        min-height: 230px;
-        width: min(100%, 320px);
+        min-height: 330px;
+        width: min(100%, 360px);
         margin-top: 30px;
       }
 
       button {
-        width: min(100%, 260px);
+        width: min(100%, 244px);
         min-height: 56px;
         font-size: 15px;
       }
@@ -589,11 +589,11 @@
       }
 
       .actions {
-        width: min(100%, 288px);
+        width: min(100%, 320px);
       }
 
       button {
-        width: 238px;
+        width: 230px;
       }
 
       .success-illustration {
@@ -710,6 +710,18 @@
         ? Math.min(lowerRowTop, Math.max(padding, area.height - button.height - padding))
         : padding;
       const maxTop = Math.max(minTop, area.height - button.height - padding);
+
+      if (isPhoneLayout) {
+        const targetLeft = cursor.x < area.width / 2 ? maxLeft : padding;
+        const lowerTravel = Math.max(1, maxTop - minTop);
+        const targetTop = minTop + lowerTravel * (0.65 + Math.random() * 0.35);
+
+        disconnectBtn.style.left = `${targetLeft}px`;
+        disconnectBtn.style.top = `${targetTop}px`;
+        disconnectBtn.style.transform = `rotate(${Math.random() * 16 - 8}deg)`;
+        return;
+      }
+
       const candidates = Array.from({ length: 18 }, () => {
         const left = Math.random() * maxLeft;
         const top = minTop + Math.random() * Math.max(1, maxTop - minTop);
