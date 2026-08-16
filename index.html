@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Даниил Войнов</title>
+    <meta
+      name="description"
+      content="Портфолио Даниила Войнова, продуктового дизайнера: проекты, кейсы, опыт работы и контакты."
+    />
+    <link rel="icon" type="image/jpeg" href="assets/daniil-voynov.jpg" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-spacer" aria-hidden="true"></div>
+      <nav class="header-nav" aria-label="Навигация">
+        <a href="cv.html">About & CV</a>
+        <button type="button" data-copy="voynovdesign@mail.ru">voynovdesign@mail.ru</button>
+      </nav>
+      <button class="theme-toggle" type="button" aria-label="Переключить тему">
+        <svg class="sun-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="4"></circle>
+          <path d="M12 2v2"></path>
+          <path d="M12 20v2"></path>
+          <path d="m4.93 4.93 1.41 1.41"></path>
+          <path d="m17.66 17.66 1.41 1.41"></path>
+          <path d="M2 12h2"></path>
+          <path d="M20 12h2"></path>
+          <path d="m6.34 17.66-1.41 1.41"></path>
+          <path d="m19.07 4.93-1.41 1.41"></path>
+        </svg>
+        <svg class="moon-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none">
+          <path d="M12 3a6 6 0 0 0 9 7.8A9 9 0 1 1 12 3Z"></path>
+        </svg>
+      </button>
+    </header>
+
+    <main id="top">
+      <section class="about" id="about">
+        <div class="about-image" aria-label="Фото Даниила">
+        </div>
+
+        <div class="about-content">
+          <p class="intro">
+            Привет! Я Даниил Войнов, продуктовый дизайнер. Проектирую веб- и
+            мобильные продукты, превращая сложные сценарии в понятные
+            интерфейсы, которые можно развивать и передавать в разработку.
+          </p>
+
+          <div class="contact-list" aria-label="Контакты">
+            <div>
+              <span>Email:</span>
+              <button type="button" data-copy="voynovdesign@mail.ru">voynovdesign@mail.ru</button>
+            </div>
+            <div>
+              <span>Telegram:</span>
+              <a href="https://t.me/veytwave">veytwave</a>
+            </div>
+            <div>
+              <span>Resume:</span>
+              <a href="#">download</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="projects" id="projects" aria-labelledby="projects-title">
+        <div class="section-title">
+          <h2 id="projects-title">Проекты</h2>
+          <div class="tabs" role="tablist" aria-label="Тип проектов" data-active="commercial">
+            <button class="tab is-active" type="button" role="tab" aria-selected="true" data-filter="commercial">
+              Коммерческие
+            </button>
+            <button class="tab" type="button" role="tab" aria-selected="false" data-filter="study">
+              Учебные
+            </button>
+          </div>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card project" data-kind="commercial">
+            <div class="project-image placeholder-light" aria-hidden="true">
+              <div class="screen-mockup"></div>
+            </div>
+            <h3>FinTech App: редизайн личного кабинета</h3>
+            <p>Web app</p>
+          </article>
+
+          <article class="project-card project" data-kind="commercial">
+            <div class="project-image placeholder-dark" aria-hidden="true">
+              <div class="screen-mockup dark"></div>
+            </div>
+            <h3>Marketplace: сценарии выбора и покупки</h3>
+            <p>Mobile app</p>
+          </article>
+
+          <article class="project-card project" data-kind="commercial">
+            <div class="project-image placeholder-gray" aria-hidden="true">
+              <div class="screen-mockup"></div>
+            </div>
+            <h3>Career.io: платформа развития карьеры</h3>
+            <p>Web app</p>
+          </article>
+
+          <article class="project-card project" data-kind="commercial">
+            <div class="project-image placeholder-photo" aria-hidden="true">
+              <div class="screen-mockup dark"></div>
+            </div>
+            <h3>Smart OS: интерфейс для автомобильной системы</h3>
+            <p>Car onboard computer</p>
+          </article>
+
+          <article class="project-card project" data-kind="commercial">
+            <div class="project-image placeholder-light" aria-hidden="true">
+              <div class="screen-mockup"></div>
+            </div>
+            <h3>CRM Dashboard: рабочее место менеджера</h3>
+            <p>Web app</p>
+          </article>
+
+          <article class="project-card project" data-kind="commercial">
+            <div class="project-image placeholder-dark" aria-hidden="true">
+              <div class="screen-mockup dark"></div>
+            </div>
+            <h3>Analytics Suite: продуктовая аналитика для команды</h3>
+            <p>SaaS dashboard</p>
+          </article>
+
+          <article class="project-card project" data-kind="study" hidden>
+            <div class="project-image placeholder-gray" aria-hidden="true">
+              <div class="screen-mockup"></div>
+            </div>
+            <h3>Education App: подготовка к экзаменам</h3>
+            <p>iOS mobile app</p>
+          </article>
+
+          <article class="project-card project" data-kind="study" hidden>
+            <div class="project-image placeholder-photo" aria-hidden="true">
+              <div class="screen-mockup dark"></div>
+            </div>
+            <h3>AI Tool: редактирование контента</h3>
+            <p>Web app</p>
+          </article>
+
+          <article class="project-card project" data-kind="study" hidden>
+            <div class="project-image placeholder-light" aria-hidden="true">
+              <div class="screen-mockup"></div>
+            </div>
+            <h3>Travel Planner: планирование поездок</h3>
+            <p>Mobile app</p>
+          </article>
+
+          <article class="project-card project" data-kind="study" hidden>
+            <div class="project-image placeholder-dark" aria-hidden="true">
+              <div class="screen-mockup dark"></div>
+            </div>
+            <h3>Habit Tracker: система привычек и прогресса</h3>
+            <p>iOS app</p>
+          </article>
+
+          <article class="project-card project" data-kind="study" hidden>
+            <div class="project-image placeholder-gray" aria-hidden="true">
+              <div class="screen-mockup"></div>
+            </div>
+            <h3>Book Exchange: обмен книгами рядом</h3>
+            <p>Mobile app</p>
+          </article>
+
+          <article class="project-card project" data-kind="study" hidden>
+            <div class="project-image placeholder-photo" aria-hidden="true">
+              <div class="screen-mockup dark"></div>
+            </div>
+            <h3>Finance Coach: учебный fintech-концепт</h3>
+            <p>Web app</p>
+          </article>
+        </div>
+      </section>
+
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
